@@ -55,16 +55,18 @@ This FastAPI project implements a backend system with features including user au
 .
 ├── app
 │   ├── __init__.py
-│   ├── auth.py          # User authentication and JWT token generation.
 │   ├── config.py        # Configuration settings using Pydantic's BaseSettings.
 │   ├── database.py      # Database connection and session management with SQLAlchemy.
 │   ├── main.py          # Main application entry point with FastAPI app instantiation.
 │   ├── models.py        # SQLAlchemy models mapping to database tables.
 │   ├── oauth2.py        # JWT token management and user authentication.
-│   ├── posts.py         # CRUD operations for posts, requiring user authentication.
 │   ├── schemas.py       # Pydantic models for request and response validation.
-│   ├── users.py         # User management and CRUD operations for users.
-│   └── vote.py          # Voting system operations.
+│   └── routers          # Router modules for different functionalities.
+│       ├── __init__.py
+│       ├── auth.py      # User authentication and JWT token generation.
+│       ├── posts.py     # CRUD operations for posts, requiring user authentication.
+│       ├── user.py      # User management and CRUD operations for users.
+│       └── vote.py      # Voting system operations.
 ├── alembic              # Database migration folder.
 │   └── versions         # Alembic migration versions.
 ├── alembic.ini          # Alembic configuration file.
